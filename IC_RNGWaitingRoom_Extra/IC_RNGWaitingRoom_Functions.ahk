@@ -118,11 +118,15 @@ class IC_RNGWaitingRoom_Functions
                 {
                     if (this.ShouldRedraw() && !this.UsedUlt && this.CanUseEllyWickUlt())
                     {
-                        this.UseEllywickUlt()
-                        this.Redraws += 1
-                        Sleep 2000
                         if this.GetNumCards() == 5
+                        {
+                            this.UseEllywickUlt()
                             Sleep 8000
+                        }
+                        else
+                            this.UseEllywickUlt()
+                        Sleep 2000
+                        this.Redraws += 1
                         this.UpdateUltStatus()
                     }
                     else
