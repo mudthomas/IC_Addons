@@ -95,7 +95,7 @@ class IC_RNGWaitingRoom_Functions
             if (this.WaitedForEllywickThisRun)
             {
                 ; Use ultimate to redraw cards if Ellywick doesn't have any gem cards.
-                if (this.CanUseEllyWickUlt() && this.GetNumGemCards() <= 1 && !this.UsedUlt && this.GetNumCards() == 5)
+                if (this.CanUseEllyWickUlt() && this.GetNumGemCards() == 0 && !this.UsedUlt && this.GetNumCards() == 5)
                     this.UseEllywickUlt()
             }
             else if this.IsSuccess()
@@ -121,7 +121,7 @@ class IC_RNGWaitingRoom_Functions
                         if this.GetNumCards() == 5
                         {
                             this.UseEllywickUlt()
-                            Sleep 7000
+                            Sleep 5000
                         }
                         else
                             this.UseEllywickUlt()
